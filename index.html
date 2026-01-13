@@ -1,117 +1,194 @@
-<!DOCTYPE html><html lang="pt-BR">
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cardápio WhatsApp – Suelma Salgados</title>
+
   <style>
+    * { box-sizing: border-box; }
+
     body {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f7f7f7;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(180deg, #fff5f5, #f7f7f7);
       color: #333;
     }
+
     header {
-      background: #b11212;
+      background: linear-gradient(135deg, #b11212, #e53935);
       color: #fff;
       text-align: center;
-      padding: 25px 15px;
+      padding: 30px 15px;
+      border-bottom-left-radius: 25px;
+      border-bottom-right-radius: 25px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
     }
+
     header h1 {
       margin: 0;
-      font-size: 2rem;
+      font-size: 2.2rem;
     }
+
     header p {
       margin-top: 8px;
       font-size: 1rem;
+      opacity: 0.95;
     }
+
     .container {
-      max-width: 500px;
-      margin: 0 auto;
+      max-width: 520px;
+      margin: -10px auto 0;
       padding: 20px;
     }
-    .section {
-      margin-bottom: 25px;
-    }
+
+    .section { margin-bottom: 30px; }
+
     .section h2 {
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       color: #b11212;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
     }
+
     .item {
       background: #fff;
-      border-radius: 10px;
-      padding: 15px;
-      margin-bottom: 10px;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+      border-radius: 15px;
+      padding: 18px;
+      margin-bottom: 15px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.08);
     }
+
     .item strong {
+      font-size: 1.05rem;
       display: block;
-      margin-bottom: 5px;
+      margin-bottom: 6px;
     }
+
+    .flavors {
+      font-size: 0.95rem;
+      color: #555;
+      margin-bottom: 6px;
+      font-style: italic;
+    }
+
+    .price {
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: #2e7d32;
+      margin-top: 6px;
+    }
+
     .btn {
       display: block;
       text-align: center;
-      margin-top: 10px;
-      padding: 12px;
-      background: #25d366;
+      margin-top: 14px;
+      padding: 14px;
+      background: linear-gradient(135deg, #25d366, #1ebe5d);
       color: #fff;
       text-decoration: none;
-      border-radius: 25px;
+      border-radius: 30px;
       font-weight: bold;
+      box-shadow: 0 4px 10px rgba(37,211,102,0.4);
     }
+
     .info {
       background: #fff;
-      padding: 15px;
-      border-radius: 10px;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+      padding: 18px;
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.08);
       font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.8rem;
+      color: #777;
+      padding: 15px 0 5px;
     }
   </style>
 </head>
-<body><header>
+
+<body>
+
+<header>
   <h1>Suelma Salgados</h1>
-  <p>📲 Cardápio clicável para WhatsApp</p>
-</header><div class="container">  <div class="section">
-    <h2>🍴 Salgados</h2><div class="item">
-  <strong>Salgados de feira</strong>
-  Carne / Queijo e presunto<br>
-  💰 R$ 6,00 unidade
-  <a class="btn" href="https://wa.me/5598984722234?text=Olá! Gostaria de pedir salgados de feira." target="_blank">Pedir no WhatsApp</a>
-</div>
+  <p>📲 Cardápio digital • Pedido rápido pelo WhatsApp</p>
+</header>
 
-<div class="item">
-  <strong>Salgados tradicionais</strong>
-  Coxinha, carne, queijo e presunto, enroladinho<br>
-  💰 R$ 4,00 unidade
-  <a class="btn" href="https://wa.me/5598984722234?text=Olá! Gostaria de pedir salgados tradicionais." target="_blank">Pedir no WhatsApp</a>
-</div>
+<div class="container">
 
-<div class="item">
-  <strong>Coxinha grande de frango</strong>
-  💰 Valor sob consulta
-  <a class="btn" href="https://wa.me/5598984722234?text=Olá! Quero saber o valor da coxinha grande de frango." target="_blank">Consultar no WhatsApp</a>
-</div>
+  <div class="section">
+    <h2>🍴 Salgados</h2>
 
-  </div>  <div class="section">
-    <h2>🎉 Centro para festa</h2><div class="item">
-  <strong>25 mini salgados</strong>
-  💰 R$ 20,00
-  <a class="btn" href="https://wa.me/5598984722234?text=Olá! Quero 25 mini salgados." target="_blank">Pedir no WhatsApp</a>
-</div>
+    <div class="item">
+      <strong>Salgados tradicionais</strong>
+      <div class="flavors">
+        Coxinha: pastel • enroladinho <br>
+        Pastel: carne • queijo e presunto
+        coxinha:carne • queijo e presunto
+      </div>
+      <div class="price">💰 R$ 4,00 unidade</div>
+      <a class="btn" href="https://wa.me/5598984722234?text=Olá! Gostaria de pedir salgados tradicionais." target="_blank">
+        👉 Pedir no WhatsApp
+      </a>
+    </div>
+  </div>
 
-<div class="item">
-  <strong>50 mini salgados</strong>
-  💰 R$ 35,00
-  <a class="btn" href="https://wa.me/5598984722234?text=Olá! Quero 50 mini salgados." target="_blank">Pedir no WhatsApp</a>
-</div>
+  <div class="section">
+    <h2>🎉 Salgados para festa</h2>
 
-<div class="item">
-  <strong>100 mini salgados</strong>
-  💰 R$ 70,00
-  <a class="btn" href="https://wa.me/5598984722234?text=Olá! Quero 100 mini salgados." target="_blank">Pedir no WhatsApp</a>
-</div>
+    <div class="item">
+      <strong>25 mini salgados</strong>
+      <div class="flavors">Sabores diversos</div>
+      <div class="price">💰 R$ 20,00</div>
+      <a class="btn" href="https://wa.me/5598984722234?text=Olá! Quero 25 mini salgados." target="_blank">
+        👉 Pedir no WhatsApp
+      </a>
+    </div>
 
-  </div>  <div class="section">
+    <div class="item">
+      <strong>50 mini salgados</strong>
+      <div class="flavors">Sabores diversos</div>
+      <div class="price">💰 R$ 35,00</div>
+      <a class="btn" href="https://wa.me/5598984722234?text=Olá! Quero 50 mini salgados." target="_blank">
+        👉 Pedir no WhatsApp
+      </a>
+    </div>
+
+    <div class="item">
+      <strong>100 mini salgados</strong>
+      <div class="flavors">Sabores diversos</div>
+      <div class="price">💰 R$ 70,00</div>
+      <a class="btn" href="https://wa.me/5598984722234?text=Olá! Quero 100 mini salgados." target="_blank">
+        👉 Pedir no WhatsApp
+      </a>
+    </div>
+
+    <div class="item">
+      <strong>50 Mini Pizza</strong>
+      <div class="flavors">Sabores: queijo e presunto • queijo e calabresa</div>
+      <div class="price">🍕 R$ 60,00</div>
+      <a class="btn" href="https://wa.me/5598984722234?text=Olá! Quero 50 mini pizzas." target="_blank">
+        👉 Pedir no WhatsApp
+      </a>
+    </div>
+
+    <div class="item">
+      <strong>100 Mini Pizza</strong>
+      <div class="flavors">Sabores: queijo e presunto • queijo e calabresa</div>
+      <div class="price">🍕 R$ 100,00</div>
+      <a class="btn" href="https://wa.me/5598984722234?text=Olá! Quero 100 mini pizzas." target="_blank">
+        👉 Pedir no WhatsApp
+      </a>
+    </div>
+
+  </div>
+
+  <div class="section">
     <h2>ℹ️ Informações</h2>
     <div class="info">
       ✔ Aceitamos cartão débito e crédito<br>
@@ -120,5 +197,13 @@
       🕒 Entregas das 14:30 às 18:00<br>
       🌅 Manhã: somente retirada
     </div>
-  </div></div></body>
+  </div>
+
+</div>
+
+<footer>
+  © Suelma Salgados • Pedido rápido pelo WhatsApp
+</footer>
+
+</body>
 </html>
